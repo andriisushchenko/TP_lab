@@ -1,0 +1,32 @@
+{
+  "source": "begin x := 1 + 2 * 3 end",
+  "expect": {
+    "ast": {
+      "type": "Program",
+      "body": {
+        "type": "Assign",
+        "name": "x",
+        "expr": {
+          "type": "BinOp",
+          "op": "+",
+          "left": {
+            "type": "Num",
+            "value": 1
+          },
+          "right": {
+            "type": "BinOp",
+            "op": "*",
+            "left": {
+              "type": "Num",
+              "value": 2
+            },
+            "right": {
+              "type": "Num",
+              "value": 3
+            }
+          }
+        }
+      }
+    }
+  }
+}

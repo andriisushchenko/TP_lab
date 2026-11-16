@@ -1,0 +1,12 @@
+{
+  "source": "begin if x > 0 then r := 1 else r := 2 end",
+  "input": {
+    "x": 5
+  },
+  "expect": {
+    "state": {
+      "x": 5,
+      "r": 1
+    }
+  }
+}

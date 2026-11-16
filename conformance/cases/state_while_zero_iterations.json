@@ -1,0 +1,8 @@
+{
+  "source": "begin x := 5; while x > 10 do x := 0 end",
+  "expect": {
+    "state": {
+      "x": 5
+    }
+  }
+}

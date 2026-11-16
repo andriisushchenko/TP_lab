@@ -1,0 +1,11 @@
+{
+  "source": "begin a := 17 div 5; b := 17 mod 5; c := -7 div 2; d := -7 mod 2 end",
+  "expect": {
+    "state": {
+      "a": 3,
+      "b": 2,
+      "c": -4,
+      "d": 1
+    }
+  }
+}

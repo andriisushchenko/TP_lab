@@ -1,0 +1,16 @@
+{
+  "source": "begin x := -5 end",
+  "expect": {
+    "ast": {
+      "type": "Program",
+      "body": {
+        "type": "Assign",
+        "name": "x",
+        "expr": {
+          "type": "Num",
+          "value": -5
+        }
+      }
+    }
+  }
+}

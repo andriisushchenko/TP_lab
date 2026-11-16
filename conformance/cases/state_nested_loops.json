@@ -1,0 +1,10 @@
+{
+  "source": "begin\n  i := 0; s := 0;\n  while 3 > i do\n  begin\n    j := 0;\n    while 2 > j do begin s := s + 1; j := j + 1 end;\n    i := i + 1\n  end\nend",
+  "expect": {
+    "state": {
+      "i": 3,
+      "j": 2,
+      "s": 6
+    }
+  }
+}

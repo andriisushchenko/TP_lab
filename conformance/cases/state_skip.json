@@ -1,0 +1,6 @@
+{
+  "source": "begin skip end",
+  "expect": {
+    "state": {}
+  }
+}

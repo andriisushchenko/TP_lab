@@ -1,0 +1,13 @@
+{
+  "source": "begin\n  F := 1;\n  I := 1;\n  while ¬ (I > N) do\n  begin\n    F := F * I;\n    I := I + 1\n  end\nend\n",
+  "input": {
+    "N": 5
+  },
+  "expect": {
+    "state": {
+      "N": 5,
+      "F": 120,
+      "I": 6
+    }
+  }
+}

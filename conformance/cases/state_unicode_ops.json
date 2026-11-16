@@ -1,0 +1,12 @@
+{
+  "source": "begin if ¬ (x > 3) ∨ x = 10 then r := 1 else r := 0 end",
+  "input": {
+    "x": 10
+  },
+  "expect": {
+    "state": {
+      "x": 10,
+      "r": 1
+    }
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "source": "begin if not x > 0 or x = 0 then skip else y := 1 end",
+  "expect": {
+    "ast": {
+      "type": "Program",
+      "body": {
+        "type": "If",
+        "cond": {
+          "type": "Or",
+          "left": {
+            "type": "Not",
+            "operand": {
+              "type": "Compare",
+              "op": ">",
+              "left": {
+                "type": "Var",
+                "name": "x"
+              },
+              "right": {
+                "type": "Num",
+                "value": 0
+              }
+            }
+          },
+          "right": {
+            "type": "Compare",
+            "op": "=",
+            "left": {
+              "type": "Var",
+              "name": "x"
+            },
+            "right": {
+              "type": "Num",
+              "value": 0
+            }
+          }
+        },
+        "then_branch": {
+          "type": "Skip"
+        },
+        "else_branch": {
+          "type": "Assign",
+          "name": "y",
+          "expr": {
+            "type": "Num",
+            "value": 1
+          }
+        }
+      }
+    }
+  }
+}

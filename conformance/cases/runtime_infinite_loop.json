@@ -1,0 +1,10 @@
+{
+  "source": "begin\n  while 1 = 1 do skip\nend",
+  "expect": {
+    "error": {
+      "kind": "runtime",
+      "line": 2,
+      "column": 3
+    }
+  }
+}

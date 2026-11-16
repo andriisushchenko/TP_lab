@@ -1,0 +1,10 @@
+{
+  "source": "begin\n  x := 5 mod (3 - 3)\nend",
+  "expect": {
+    "error": {
+      "kind": "runtime",
+      "line": 2,
+      "column": 8
+    }
+  }
+}

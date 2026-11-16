@@ -1,0 +1,13 @@
+{
+  "source": "begin\n  while ¬ (A = B) do\n    if A > B then A := A - B else B := B - A\nend\n",
+  "input": {
+    "A": 48,
+    "B": 18
+  },
+  "expect": {
+    "state": {
+      "A": 6,
+      "B": 6
+    }
+  }
+}

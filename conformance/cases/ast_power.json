@@ -1,0 +1,73 @@
+{
+  "source": "begin\n  R := 1;\n  while Y > 0 do\n  begin\n    R := R * X;\n    Y := Y - 1\n  end\nend\n",
+  "expect": {
+    "ast": {
+      "type": "Program",
+      "body": {
+        "type": "Seq",
+        "statements": [
+          {
+            "type": "Assign",
+            "name": "R",
+            "expr": {
+              "type": "Num",
+              "value": 1
+            }
+          },
+          {
+            "type": "While",
+            "cond": {
+              "type": "Compare",
+              "op": ">",
+              "left": {
+                "type": "Var",
+                "name": "Y"
+              },
+              "right": {
+                "type": "Num",
+                "value": 0
+              }
+            },
+            "body": {
+              "type": "Seq",
+              "statements": [
+                {
+                  "type": "Assign",
+                  "name": "R",
+                  "expr": {
+                    "type": "BinOp",
+                    "op": "*",
+                    "left": {
+                      "type": "Var",
+                      "name": "R"
+                    },
+                    "right": {
+                      "type": "Var",
+                      "name": "X"
+                    }
+                  }
+                },
+                {
+                  "type": "Assign",
+                  "name": "Y",
+                  "expr": {
+                    "type": "BinOp",
+                    "op": "-",
+                    "left": {
+                      "type": "Var",
+                      "name": "Y"
+                    },
+                    "right": {
+                      "type": "Num",
+                      "value": 1
+                    }
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      }
+    }
+  }
+}

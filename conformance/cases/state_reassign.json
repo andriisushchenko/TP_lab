@@ -1,0 +1,8 @@
+{
+  "source": "begin x := 1; x := x + 1; x := x * 10 end",
+  "expect": {
+    "state": {
+      "x": 20
+    }
+  }
+}

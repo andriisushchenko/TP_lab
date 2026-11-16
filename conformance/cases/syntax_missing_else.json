@@ -1,0 +1,10 @@
+{
+  "source": "begin\n  if x > 0 then x := 1\nend",
+  "expect": {
+    "error": {
+      "kind": "syntax",
+      "line": 3,
+      "column": 1
+    }
+  }
+}

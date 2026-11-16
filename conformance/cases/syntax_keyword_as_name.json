@@ -1,0 +1,10 @@
+{
+  "source": "begin x := end end",
+  "expect": {
+    "error": {
+      "kind": "syntax",
+      "line": 1,
+      "column": 12
+    }
+  }
+}
