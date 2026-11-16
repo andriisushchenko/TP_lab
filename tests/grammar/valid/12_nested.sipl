@@ -1,0 +1,7 @@
+begin
+  while N > I do
+    if I > 5 then
+      begin S := S + I; I := I + 1 end
+    else
+      while J > 0 do J := J - 1
+end

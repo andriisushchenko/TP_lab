@@ -1,0 +1,1 @@
+begin q := n div 10; r := n mod 10 end

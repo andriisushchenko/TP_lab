@@ -1,0 +1,47 @@
+?start: program
+
+program: "begin" stmt_seq "end"
+
+?stmt_seq: stmt (";" stmt)*
+
+?stmt: assign
+     | if_stmt
+     | while_stmt
+     | block
+     | skip_stmt
+
+assign: NAME ":=" aexpr
+if_stmt: "if" bexpr "then" stmt "else" stmt
+while_stmt: "while" bexpr "do" stmt
+block: "begin" stmt_seq "end"
+skip_stmt: "skip"
+
+?aexpr: aterm
+      | aexpr "+" aterm     -> add
+      | aexpr "-" aterm     -> sub
+
+?aterm: afactor
+      | aterm "*" afactor   -> mul
+      | aterm "div" afactor -> div
+      | aterm "mod" afactor -> mod
+
+?afactor: NUMBER            -> num
+        | "-" NUMBER        -> neg_num
+        | NAME              -> var
+        | "(" aexpr ")"
+
+?bexpr: bfactor
+      | bexpr ("or" | "∨") bfactor -> or_
+
+?bfactor: ("not" | "¬") bfactor    -> not_
+        | batom
+
+?batom: aexpr "=" aexpr     -> eq
+      | aexpr ">" aexpr     -> gt
+      | "(" bexpr ")"
+
+NAME: /[A-Za-z_][A-Za-z0-9_]*/
+NUMBER: /[0-9]+/
+
+%import common.WS
+%ignore WS
